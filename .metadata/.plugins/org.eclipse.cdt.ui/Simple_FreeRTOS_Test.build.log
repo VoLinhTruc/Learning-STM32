@@ -1,0 +1,20 @@
+22:17:11 **** Incremental Build of configuration Debug for project Simple_FreeRTOS_Test ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DDEBUG -DSTM32F407xx -c -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Simple_FreeRTOS_Test.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\STM32F407VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Simple_FreeRTOS_Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Simple_FreeRTOS_Test.elf
+ 
+arm-none-eabi-objdump -h -S  Simple_FreeRTOS_Test.elf  > "Simple_FreeRTOS_Test.list"
+arm-none-eabi-objcopy  -O ihex  Simple_FreeRTOS_Test.elf  "Simple_FreeRTOS_Test.hex"
+arm-none-eabi-size   Simple_FreeRTOS_Test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21784	     24	  18000	  39808	   9b80	Simple_FreeRTOS_Test.elf
+Finished building: default.size.stdout
+ 
+Finished building: Simple_FreeRTOS_Test.hex
+ 
+Finished building: Simple_FreeRTOS_Test.list
+ 
+
+22:17:33 Build Finished. 0 errors, 0 warnings. (took 21s.813ms)
+

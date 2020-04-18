@@ -1,0 +1,10 @@
+18:26:41 **** Incremental Build of configuration Release for project F103_Build_Test ****
+make -j4 all 
+arm-none-eabi-size   F103_Build_Test.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3244	     20	   1572	   4836	   12e4	F103_Build_Test.elf
+Finished building: default.size.stdout
+ 
+
+18:26:48 Build Finished. 0 errors, 0 warnings. (took 6s.722ms)
+
