@@ -3,10 +3,13 @@ LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
 activeLaunchTarget=null\:---
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:F103_Build_Test Release,org.eclipse.launchbar.core.descriptorType.default\:New_configuration,org.eclipse.launchbar.core.descriptorType.default\:Simple_FreeRTOS_Test Debug
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:F103_Build_Test Release,org.eclipse.launchbar.core.descriptorType.default\:New_configuration,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Simple_FreeRTOS_Test Debug (1),org.eclipse.launchbar.core.descriptorType.default\:Simple_FreeRTOS_Test Debug
 eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Simple_FreeRTOS_Test\ Debug\ (1)/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Simple_FreeRTOS_Test\ Debug\ (1)/activeLaunchTarget=null\:---
 org.eclipse.launchbar.core.descriptorType.default\:F103_Build_Test\ Release/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:F103_Build_Test\ Release/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:New_configuration/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:New_configuration/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:Simple_FreeRTOS_Test\ Debug/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Simple_FreeRTOS_Test\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

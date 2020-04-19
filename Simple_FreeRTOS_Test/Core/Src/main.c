@@ -44,21 +44,22 @@
 /* Private variables ---------------------------------------------------------*/
 UART_HandleTypeDef huart1;
 
-osThreadId defaultTaskHandle;
-osThreadId myTask02Handle;
-osThreadId myTask03Handle;
-osSemaphoreId myBinarySem01Handle;
+osThreadId_t defaultTaskHandle;
+osThreadId_t myTask02Handle;
+osThreadId_t myTask03Handle;
+osMessageQueueId_t uart_rx_queueHandle;
+osSemaphoreId_t myBinarySem01Handle;
 /* USER CODE BEGIN PV */
-
+uint32_t x = 5;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART1_UART_Init(void);
-void StartDefaultTask(void const * argument);
-void StartTask02(void const * argument);
-void StartTask03(void const * argument);
+void StartDefaultTask(void *argument);
+void StartTask02(void *argument);
+void StartTask03(void *argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -103,14 +104,18 @@ int main(void)
 
   /* USER CODE END 2 */
 
+  osKernelInitialize();
+
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
 
   /* Create the semaphores(s) */
   /* definition and creation of myBinarySem01 */
-  osSemaphoreDef(myBinarySem01);
-  myBinarySem01Handle = osSemaphoreCreate(osSemaphore(myBinarySem01), 1);
+  const osSemaphoreAttr_t myBinarySem01_attributes = {
+    .name = "myBinarySem01"
+  };
+  myBinarySem01Handle = osSemaphoreNew(1, 1, &myBinarySem01_attributes);
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
@@ -120,22 +125,41 @@ int main(void)
   /* start timers, add new ones, ... */
   /* USER CODE END RTOS_TIMERS */
 
+  /* Create the queue(s) */
+  /* definition and creation of uart_rx_queue */
+  const osMessageQueueAttr_t uart_rx_queue_attributes = {
+    .name = "uart_rx_queue"
+  };
+  uart_rx_queueHandle = osMessageQueueNew (256, sizeof(uint8_t), &uart_rx_queue_attributes);
+
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityIdle, 0, 128);
-  defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
+  const osThreadAttr_t defaultTask_attributes = {
+    .name = "defaultTask",
+    .priority = (osPriority_t) osPriorityLow,
+    .stack_size = 128
+  };
+  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
   /* definition and creation of myTask02 */
-  osThreadDef(myTask02, StartTask02, osPriorityNormal, 0, 128);
-  myTask02Handle = osThreadCreate(osThread(myTask02), NULL);
+  const osThreadAttr_t myTask02_attributes = {
+    .name = "myTask02",
+    .priority = (osPriority_t) osPriorityNormal,
+    .stack_size = 1280
+  };
+  myTask02Handle = osThreadNew(StartTask02, NULL, &myTask02_attributes);
 
   /* definition and creation of myTask03 */
-  osThreadDef(myTask03, StartTask03, osPriorityNormal, 0, 128);
-  myTask03Handle = osThreadCreate(osThread(myTask03), NULL);
+  const osThreadAttr_t myTask03_attributes = {
+    .name = "myTask03",
+    .priority = (osPriority_t) osPriorityNormal,
+    .stack_size = 1280
+  };
+  myTask03Handle = osThreadNew(StartTask03, NULL, &myTask03_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -172,10 +196,14 @@ void SystemClock_Config(void)
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
   /** Initializes the CPU, AHB and APB busses clocks 
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
-  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+  RCC_OscInitStruct.PLL.PLLM = 4;
+  RCC_OscInitStruct.PLL.PLLN = 168;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+  RCC_OscInitStruct.PLL.PLLQ = 4;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -184,12 +212,12 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
   {
     Error_Handler();
   }
@@ -211,7 +239,7 @@ static void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 1 */
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 9600;
+  huart1.Init.BaudRate = 921600;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;
@@ -239,6 +267,7 @@ static void MX_GPIO_Init(void)
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOE_CLK_ENABLE();
+  __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
@@ -247,7 +276,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pins : PE3 PE4 */
   GPIO_InitStruct.Pin = GPIO_PIN_3|GPIO_PIN_4;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PA6 PA7 */
@@ -270,20 +299,17 @@ static void MX_GPIO_Init(void)
   * @retval None
   */
 /* USER CODE END Header_StartDefaultTask */
-void StartDefaultTask(void const * argument)
+void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
   for(;;)
   {
-	  uint8_t str[] = "1111111111111111111111111111111111111111\r\n";
-	  osSemaphoreWait(myBinarySem01Handle, 1000);
-	  HAL_UART_Transmit(&huart1, str, sizeof(str), 1000);
-//	  HAL_UART_Transmit_IT(&huart1, str, sizeof(str));
-//	  HAL_UART_Transmit_DMA(&huart1, str, sizeof(str));
-	  while(!HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_4)) {}
-	  osSemaphoreRelease(myBinarySem01Handle);
-    osDelay(1);
+//	  uint8_t str[] = "1111111111111111111111111111111111111111\r\n";
+//	  HAL_UART_Transmit(&huart1, str, sizeof(str), 1000);
+//
+//	  while(!HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_4)){}
+    osDelay(100);
   }
   /* USER CODE END 5 */ 
 }
@@ -295,22 +321,25 @@ void StartDefaultTask(void const * argument)
 * @retval None
 */
 /* USER CODE END Header_StartTask02 */
-void StartTask02(void const * argument)
+void StartTask02(void *argument)
 {
   /* USER CODE BEGIN StartTask02 */
   /* Infinite loop */
   for(;;)
   {
-	  uint8_t str[] = "2\r\n";
-	  int32_t sema_state = osSemaphoreWait(myBinarySem01Handle, 1000);
-	  HAL_UART_Transmit(&huart1, str, sizeof(str), 1000);
-//	  HAL_UART_Transmit_IT(&huart1, str, sizeof(str));
-//	  HAL_UART_Transmit_DMA(&huart1, str, sizeof(str));
+	  x++;
+	  int32_t sema_state = osSemaphoreAcquire(myBinarySem01Handle, 10);
 	  if(sema_state == osOK)
+	  {
+		  char str1[10];
+		  itoa(x, str1, 10);
+		  HAL_UART_Transmit(&huart1, str1, strlen(str1), 1000);
+		  HAL_UART_Transmit(&huart1, " - Task 2\r\n", 11, 1000);
 		  osSemaphoreRelease(myBinarySem01Handle);
+	  }
 	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_6);
-//	  osDelay(300);
-	  osDelay(100);
+
+//	  osDelay(1);
   }
   /* USER CODE END StartTask02 */
 }
@@ -322,22 +351,31 @@ void StartTask02(void const * argument)
 * @retval None
 */
 /* USER CODE END Header_StartTask03 */
-void StartTask03(void const * argument)
+void StartTask03(void *argument)
 {
   /* USER CODE BEGIN StartTask03 */
   /* Infinite loop */
   for(;;)
   {
-	  uint8_t str[] = "3\r\n";
-	  int32_t sema_state = osSemaphoreWait(myBinarySem01Handle, 1000);
-	  HAL_UART_Transmit(&huart1, str, sizeof(str), 1000);
-//	  HAL_UART_Transmit_IT(&huart1, str, sizeof(str));
-//	  HAL_UART_Transmit_DMA(&huart1, str, sizeof(str));
+	  x++;
+	  int32_t sema_state = osSemaphoreAcquire(myBinarySem01Handle, 010);
 	  if(sema_state == osOK)
+	  {
+		  char str1[10];
+		  itoa(x, str1, 10);
+		  HAL_UART_Transmit(&huart1, str1, strlen(str1), 1000);
+		  HAL_UART_Transmit(&huart1, " - Task3\r\n", 11, 1000);
 		  osSemaphoreRelease(myBinarySem01Handle);
+	  }
 	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_7);
-//	  osDelay(700);
-    osDelay(100);
+//	  osDelay(250);
+//    osDelay(1);
+
+//	  uint8_t data;
+//	  if(HAL_OK == HAL_UART_Receive(huart, &data, 1, Timeout))
+//	  {
+//		  HAL_UART_Receive_IT(huart, pData, Size)
+//	  }
   }
   /* USER CODE END StartTask03 */
 }

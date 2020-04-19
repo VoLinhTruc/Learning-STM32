@@ -58,6 +58,7 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define NUM_OF_CSEM1 3
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

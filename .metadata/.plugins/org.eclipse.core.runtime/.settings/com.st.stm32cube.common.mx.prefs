@@ -1,4 +1,5 @@
 STM32CubeMX.AskDoCodeGenerationOnIocSave=false
-STM32CubeMX.AskDoSaveAllOnCodeGeneration=false
+STM32CubeMX.AskDoSaveAllOnCodeGeneration=true
 STM32CubeMX.AskSwitchToCubeMxPerspective=false
+STM32CubeMX.DoSaveAllOnCodeGeneration=false
 eclipse.preferences.version=1
