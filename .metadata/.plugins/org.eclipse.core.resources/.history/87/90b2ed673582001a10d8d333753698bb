@@ -49,7 +49,6 @@ osThreadId_t myTask02Handle;
 osThreadId_t myTask03Handle;
 osMessageQueueId_t uart_rx_queueHandle;
 osSemaphoreId_t myBinarySem01Handle;
-osSemaphoreId_t myCountingSem01Handle;
 /* USER CODE BEGIN PV */
 uint32_t x = 5;
 /* USER CODE END PV */
@@ -117,12 +116,6 @@ int main(void)
     .name = "myBinarySem01"
   };
   myBinarySem01Handle = osSemaphoreNew(1, 1, &myBinarySem01_attributes);
-
-  /* definition and creation of myCountingSem01 */
-  const osSemaphoreAttr_t myCountingSem01_attributes = {
-    .name = "myCountingSem01"
-  };
-  myCountingSem01Handle = osSemaphoreNew(3, 3, &myCountingSem01_attributes);
 
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
@@ -316,22 +309,7 @@ void StartDefaultTask(void *argument)
 //	  HAL_UART_Transmit(&huart1, str, sizeof(str), 1000);
 //
 //	  while(!HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_4)){}
-
-	  uint8_t avai_sema = osSemaphoreGetCount(myCountingSem01Handle);
-	  if(avai_sema == 1)
-	  {
-		  x++;
-		  osSemaphoreAcquire(myCountingSem01Handle, 10);
-		  char str1[10];
-		  itoa(x, str1, 10);
-		  HAL_UART_Transmit(&huart1, str1, strlen(str1), 1000);
-		  HAL_UART_Transmit(&huart1, " - Task1\r\n", 11, 1000);
-		  osSemaphoreRelease(myCountingSem01Handle);
-		  osSemaphoreRelease(myCountingSem01Handle);
-		  osSemaphoreRelease(myCountingSem01Handle);
-	  }
-
-    osDelay(1);
+    osDelay(100);
   }
   /* USER CODE END 5 */ 
 }
@@ -349,31 +327,19 @@ void StartTask02(void *argument)
   /* Infinite loop */
   for(;;)
   {
-//	  x++;
-//	  int32_t sema_state = osSemaphoreAcquire(myBinarySem01Handle, 10);
-//	  if(sema_state == osOK)
-//	  {
-//		  char str1[10];
-//		  itoa(x, str1, 10);
-//		  HAL_UART_Transmit(&huart1, str1, strlen(str1), 1000);
-//		  HAL_UART_Transmit(&huart1, " - Task 2\r\n", 11, 1000);
-//		  osSemaphoreRelease(myBinarySem01Handle);
-//	  }
-
-	  uint8_t avai_sema = osSemaphoreGetCount(myCountingSem01Handle);
-	  if(avai_sema == 2)
+	  x++;
+	  int32_t sema_state = osSemaphoreAcquire(myBinarySem01Handle, 10);
+	  if(sema_state == osOK)
 	  {
-		  x++;
-		  osSemaphoreAcquire(myCountingSem01Handle, 10);
 		  char str1[10];
 		  itoa(x, str1, 10);
 		  HAL_UART_Transmit(&huart1, str1, strlen(str1), 1000);
-		  HAL_UART_Transmit(&huart1, " - Task2\r\n", 11, 1000);
+		  HAL_UART_Transmit(&huart1, " - Task 2\r\n", 11, 1000);
+		  osSemaphoreRelease(myBinarySem01Handle);
 	  }
-
 	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_6);
 
-	  osDelay(1);
+//	  osDelay(1);
   }
   /* USER CODE END StartTask02 */
 }
@@ -391,31 +357,19 @@ void StartTask03(void *argument)
   /* Infinite loop */
   for(;;)
   {
-//	  x++;
-//	  int32_t sema_state = osSemaphoreAcquire(myBinarySem01Handle, 10);
-//	  if(sema_state == osOK)
-//	  {
-//		  char str1[10];
-//		  itoa(x, str1, 10);
-//		  HAL_UART_Transmit(&huart1, str1, strlen(str1), 1000);
-//		  HAL_UART_Transmit(&huart1, " - Task3\r\n", 11, 1000);
-//		  osSemaphoreRelease(myBinarySem01Handle);
-//	  }
-
-	  uint8_t avai_sema = osSemaphoreGetCount(myCountingSem01Handle);
-	  if(avai_sema == 3)
+	  x++;
+	  int32_t sema_state = osSemaphoreAcquire(myBinarySem01Handle, 010);
+	  if(sema_state == osOK)
 	  {
-		  x++;
-		  osSemaphoreAcquire(myCountingSem01Handle, 10);
 		  char str1[10];
 		  itoa(x, str1, 10);
 		  HAL_UART_Transmit(&huart1, str1, strlen(str1), 1000);
 		  HAL_UART_Transmit(&huart1, " - Task3\r\n", 11, 1000);
+		  osSemaphoreRelease(myBinarySem01Handle);
 	  }
-
 	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_7);
 //	  osDelay(250);
-    osDelay(1);
+//    osDelay(1);
 
 //	  uint8_t data;
 //	  if(HAL_OK == HAL_UART_Receive(huart, &data, 1, Timeout))

@@ -6274,3 +6274,201 @@
 2020-04-19 17:34:21,317 [INFO] ProjectBuilder:2373 - Time for Generating toolchain IDE Files: 6728mS.
 2020-04-19 17:34:21,323 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 4mS.
 2020-04-19 17:34:21,410 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 1mS.
+2020-04-19 18:41:08,648 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Tab changed to: Pinout & Configuration
+2020-04-19 18:41:15,156 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2020-04-19 18:41:15,740 [INFO] BlockDiagram:1827 - stop enableDisableButtons
+2020-04-19 18:41:16,390 [ERROR] RtosPanel:506 - Can not restore the selected Tab for FREERTOS(A reason can be that the tab is no more available.)
+2020-04-19 18:41:57,639 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 885765896 Bytes (1073741824)
+2020-04-19 18:41:58,065 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 897441728 Bytes (1073741824)
+2020-04-19 18:41:58,607 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: FREERTOS
+2020-04-19 18:41:58,608 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: SYS
+2020-04-19 18:41:58,609 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: RCC
+2020-04-19 18:41:58,609 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: NVIC
+2020-04-19 18:41:58,610 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: USART
+2020-04-19 18:41:58,611 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: GPIO
+2020-04-19 18:41:58,618 [INFO] CodeGenerator:598 - code generatio: config db path: C:\ST\STM32CubeIDE_1.1.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\
+2020-04-19 18:41:59,179 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\license.tmp_save
+2020-04-19 18:41:59,343 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\license.tmp
+2020-04-19 18:41:59,417 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\gpio.tmp_save
+2020-04-19 18:41:59,658 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\gpio.tmp
+2020-04-19 18:41:59,839 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2020-04-19 18:41:59,909 [INFO] Middleware:1071 - No code input for Bsp Dependency
+2020-04-19 18:41:59,941 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_inc.tmp_save
+2020-04-19 18:42:00,170 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_inc.tmp
+2020-04-19 18:42:00,210 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_start.tmp_save
+2020-04-19 18:42:00,458 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_start.tmp
+2020-04-19 18:42:00,492 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_vars.tmp_save
+2020-04-19 18:42:00,705 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_vars.tmp
+2020-04-19 18:42:00,731 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_pfp.tmp_save
+2020-04-19 18:42:00,888 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_pfp.tmp
+2020-04-19 18:42:00,913 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_HalInit.tmp_save
+2020-04-19 18:42:01,070 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_HalInit.tmp
+2020-04-19 18:42:01,096 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_threads.tmp_save
+2020-04-19 18:42:01,271 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_threads.tmp
+2020-04-19 18:42:01,297 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_user_threads.tmp_save
+2020-04-19 18:42:01,494 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_user_threads.tmp
+2020-04-19 18:42:01,527 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\FreeRTOSConfig.h_save
+2020-04-19 18:42:01,714 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\FreeRTOSConfig.h
+2020-04-19 18:42:01,746 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\freertos.c_save
+2020-04-19 18:42:01,949 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\freertos.c
+2020-04-19 18:42:01,964 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2020-04-19 18:42:01,964 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2020-04-19 18:42:01,980 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-04-19 18:42:01,980 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2020-04-19 18:42:01,980 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2020-04-19 18:42:01,980 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-04-19 18:42:01,996 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2020-04-19 18:42:01,996 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-04-19 18:42:02,027 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\stm32f4xx_it.c_save
+2020-04-19 18:42:02,281 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\stm32f4xx_it.c
+2020-04-19 18:42:02,325 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\stm32f4xx_it.h_save
+2020-04-19 18:42:02,570 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\stm32f4xx_it.h
+2020-04-19 18:42:02,622 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\stm32f4xx_hal_msp.c_save
+2020-04-19 18:42:02,886 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\stm32f4xx_hal_msp.c
+2020-04-19 18:42:02,919 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\system.tmp_save
+2020-04-19 18:42:03,075 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\system.tmp
+2020-04-19 18:42:03,110 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\stm32f4xx_hal_timebase_tim.c_save
+2020-04-19 18:42:03,321 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\stm32f4xx_hal_timebase_tim.c
+2020-04-19 18:42:03,370 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\stm32f4xx_hal_conf.h_save
+2020-04-19 18:42:03,574 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\stm32f4xx_hal_conf.h
+2020-04-19 18:42:03,615 [WARN] IPConfigManager:2673 - IP not found : gpio
+2020-04-19 18:42:03,620 [WARN] CodeGenerator:2697 - IP not found : gpio
+2020-04-19 18:42:03,640 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\main.h_save
+2020-04-19 18:42:03,813 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\main.h
+2020-04-19 18:42:03,856 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\main.c_save
+2020-04-19 18:42:04,151 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\main.c
+2020-04-19 18:42:06,933 [INFO] ProjectBuilder:1645 - Time for Copy HAL[1] : 1183mS.
+2020-04-19 18:42:06,955 [INFO] ProjectBuilder:2206 - Project Generator version: 3.5.2
+2020-04-19 18:42:08,296 [INFO] ConfigFileManager:953 - The Die is : DIE413
+2020-04-19 18:42:13,178 [INFO] ProjectBuilder:2373 - Time for Generating toolchain IDE Files: 6224mS.
+2020-04-19 18:42:13,183 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 3mS.
+2020-04-19 18:42:13,254 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 0mS.
+2020-04-19 18:42:14,059 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 518941864 Bytes (1073741824)
+2020-04-19 18:42:14,707 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: FREERTOS
+2020-04-19 18:42:14,707 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: SYS
+2020-04-19 18:42:14,707 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: RCC
+2020-04-19 18:42:14,707 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: NVIC
+2020-04-19 18:42:14,707 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: USART
+2020-04-19 18:42:14,707 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: GPIO
+2020-04-19 18:42:14,707 [INFO] CodeGenerator:598 - code generatio: config db path: C:\ST\STM32CubeIDE_1.1.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\
+2020-04-19 18:42:15,364 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\license.tmp_save
+2020-04-19 18:42:15,645 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\license.tmp
+2020-04-19 18:42:15,718 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\gpio.tmp_save
+2020-04-19 18:42:15,975 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\gpio.tmp
+2020-04-19 18:42:16,112 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2020-04-19 18:42:16,170 [INFO] Middleware:1071 - No code input for Bsp Dependency
+2020-04-19 18:42:16,192 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_inc.tmp_save
+2020-04-19 18:42:16,398 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_inc.tmp
+2020-04-19 18:42:16,434 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_start.tmp_save
+2020-04-19 18:42:16,662 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_start.tmp
+2020-04-19 18:42:16,698 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_vars.tmp_save
+2020-04-19 18:42:17,080 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_vars.tmp
+2020-04-19 18:42:17,108 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_pfp.tmp_save
+2020-04-19 18:42:17,307 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_pfp.tmp
+2020-04-19 18:42:17,344 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_HalInit.tmp_save
+2020-04-19 18:42:17,615 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_HalInit.tmp
+2020-04-19 18:42:17,648 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_threads.tmp_save
+2020-04-19 18:42:17,828 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_threads.tmp
+2020-04-19 18:42:17,856 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_user_threads.tmp_save
+2020-04-19 18:42:18,021 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_user_threads.tmp
+2020-04-19 18:42:18,059 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\FreeRTOSConfig.h_save
+2020-04-19 18:42:18,350 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\FreeRTOSConfig.h
+2020-04-19 18:42:18,402 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\freertos.c_save
+2020-04-19 18:42:18,810 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\freertos.c
+2020-04-19 18:42:18,844 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2020-04-19 18:42:18,847 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2020-04-19 18:42:18,849 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-04-19 18:42:18,856 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2020-04-19 18:42:18,859 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2020-04-19 18:42:18,861 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-04-19 18:42:18,869 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2020-04-19 18:42:18,873 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-04-19 18:42:18,907 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\stm32f4xx_it.c_save
+2020-04-19 18:42:19,289 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\stm32f4xx_it.c
+2020-04-19 18:42:19,317 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\stm32f4xx_it.h_save
+2020-04-19 18:42:19,810 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\stm32f4xx_it.h
+2020-04-19 18:42:19,871 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\stm32f4xx_hal_msp.c_save
+2020-04-19 18:42:20,302 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\stm32f4xx_hal_msp.c
+2020-04-19 18:42:20,342 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\system.tmp_save
+2020-04-19 18:42:20,600 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\system.tmp
+2020-04-19 18:42:20,634 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\stm32f4xx_hal_timebase_tim.c_save
+2020-04-19 18:42:20,844 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\stm32f4xx_hal_timebase_tim.c
+2020-04-19 18:42:20,900 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\stm32f4xx_hal_conf.h_save
+2020-04-19 18:42:21,230 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\stm32f4xx_hal_conf.h
+2020-04-19 18:42:21,289 [WARN] IPConfigManager:2673 - IP not found : gpio
+2020-04-19 18:42:21,297 [WARN] CodeGenerator:2697 - IP not found : gpio
+2020-04-19 18:42:21,327 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\main.h_save
+2020-04-19 18:42:21,599 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\main.h
+2020-04-19 18:42:21,637 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\main.c_save
+2020-04-19 18:42:21,931 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\main.c
+2020-04-19 18:42:23,992 [INFO] ProjectBuilder:1645 - Time for Copy HAL[1] : 982mS.
+2020-04-19 18:42:24,015 [INFO] ProjectBuilder:2206 - Project Generator version: 3.5.2
+2020-04-19 18:42:25,199 [INFO] ConfigFileManager:953 - The Die is : DIE413
+2020-04-19 18:42:29,409 [INFO] ProjectBuilder:2373 - Time for Generating toolchain IDE Files: 5394mS.
+2020-04-19 18:42:29,416 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 4mS.
+2020-04-19 18:42:29,510 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 7mS.
+2020-04-19 18:56:14,247 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 520300200 Bytes (1073741824)
+2020-04-19 18:56:14,949 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 532585592 Bytes (1073741824)
+2020-04-19 18:56:15,541 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: FREERTOS
+2020-04-19 18:56:15,542 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: SYS
+2020-04-19 18:56:15,542 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: RCC
+2020-04-19 18:56:15,543 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: NVIC
+2020-04-19 18:56:15,544 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: USART
+2020-04-19 18:56:15,544 [INFO] BlockDiagram:1871 - set Specific Code input for plugin: GPIO
+2020-04-19 18:56:15,550 [INFO] CodeGenerator:598 - code generatio: config db path: C:\ST\STM32CubeIDE_1.1.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_5.4.0.201910091541\\db\
+2020-04-19 18:56:15,970 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\license.tmp_save
+2020-04-19 18:56:16,126 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\license.tmp
+2020-04-19 18:56:16,172 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\gpio.tmp_save
+2020-04-19 18:56:16,318 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\gpio.tmp
+2020-04-19 18:56:16,457 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2020-04-19 18:56:16,521 [INFO] Middleware:1071 - No code input for Bsp Dependency
+2020-04-19 18:56:16,546 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_inc.tmp_save
+2020-04-19 18:56:16,744 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_inc.tmp
+2020-04-19 18:56:16,785 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_start.tmp_save
+2020-04-19 18:56:17,017 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_start.tmp
+2020-04-19 18:56:17,054 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_vars.tmp_save
+2020-04-19 18:56:17,296 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_vars.tmp
+2020-04-19 18:56:17,327 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_pfp.tmp_save
+2020-04-19 18:56:17,499 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_pfp.tmp
+2020-04-19 18:56:17,530 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_HalInit.tmp_save
+2020-04-19 18:56:17,687 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_HalInit.tmp
+2020-04-19 18:56:17,718 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_threads.tmp_save
+2020-04-19 18:56:17,859 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_threads.tmp
+2020-04-19 18:56:17,874 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_user_threads.tmp_save
+2020-04-19 18:56:18,074 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\rtos_user_threads.tmp
+2020-04-19 18:56:18,107 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\FreeRTOSConfig.h_save
+2020-04-19 18:56:18,293 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\FreeRTOSConfig.h
+2020-04-19 18:56:18,327 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\freertos.c_save
+2020-04-19 18:56:18,500 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\freertos.c
+2020-04-19 18:56:18,516 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2020-04-19 18:56:18,519 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for SYS
+2020-04-19 18:56:18,521 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-04-19 18:56:18,526 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2020-04-19 18:56:18,528 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for USART
+2020-04-19 18:56:18,530 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-04-19 18:56:18,538 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Debug : prepare data for NVIC
+2020-04-19 18:56:18,540 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line test
+2020-04-19 18:56:18,574 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\stm32f4xx_it.c_save
+2020-04-19 18:56:18,840 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\stm32f4xx_it.c
+2020-04-19 18:56:18,875 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\stm32f4xx_it.h_save
+2020-04-19 18:56:19,103 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\stm32f4xx_it.h
+2020-04-19 18:56:19,172 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\stm32f4xx_hal_msp.c_save
+2020-04-19 18:56:19,510 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\stm32f4xx_hal_msp.c
+2020-04-19 18:56:19,554 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\system.tmp_save
+2020-04-19 18:56:19,749 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\MXTmpFiles\system.tmp
+2020-04-19 18:56:19,782 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\stm32f4xx_hal_timebase_tim.c_save
+2020-04-19 18:56:20,033 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\stm32f4xx_hal_timebase_tim.c
+2020-04-19 18:56:20,080 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\stm32f4xx_hal_conf.h_save
+2020-04-19 18:56:20,329 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\stm32f4xx_hal_conf.h
+2020-04-19 18:56:20,379 [WARN] IPConfigManager:2673 - IP not found : gpio
+2020-04-19 18:56:20,383 [WARN] CodeGenerator:2697 - IP not found : gpio
+2020-04-19 18:56:20,409 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\main.h_save
+2020-04-19 18:56:20,591 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Inc\main.h
+2020-04-19 18:56:20,630 [INFO] CodeEngine:193 - oldGeneratedFile, C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\main.c_save
+2020-04-19 18:56:21,178 [INFO] CodeEngine:211 - Generated code: C:\Users\Bico\Desktop\workspace_2.1.0\Simple_FreeRTOS_Test\Core\Src\main.c
+2020-04-19 18:56:23,038 [INFO] ProjectBuilder:1645 - Time for Copy HAL[1] : 1034mS.
+2020-04-19 18:56:23,061 [INFO] ProjectBuilder:2206 - Project Generator version: 3.5.2
+2020-04-19 18:56:23,616 [INFO] ConfigFileManager:953 - The Die is : DIE413
+2020-04-19 18:56:29,831 [INFO] ProjectBuilder:2373 - Time for Generating toolchain IDE Files: 6770mS.
+2020-04-19 18:56:29,837 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 4mS.
+2020-04-19 18:56:29,909 [INFO] ProjectBuilder:1505 - Time for Copy CMSIS : 0mS.
